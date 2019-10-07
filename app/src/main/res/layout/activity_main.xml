@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lyPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="INGRESAR PLACA"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/txtPlaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColorHint="@android:color/white"
+            android:hint="Ingresa tu placa..." />
+
+        <Button
+            android:id="@+id/btnConsultar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onClickConsultar"
+            android:background="@drawable/button_rounded"
+            android:text="Consultar"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyPlaca"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="CONTRAVENCIÓN:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            tools:ignore="Suspicious0dp" />
+        <TextView
+            android:id="@+id/txtCon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            tools:ignore="Suspicious0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_below="@+id/lyc"
+        android:background="@color/colorBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="# CONTRAVENCIONES:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            tools:ignore="Suspicious0dp" />
+        <TextView
+            android:id="@+id/txtNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            tools:ignore="Suspicious0dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClickRegistros"
+        android:text="Historial"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
